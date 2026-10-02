@@ -16,7 +16,7 @@ tags: [nexacos, n8n, codex, openclaw, mcp, tarefas, backlog]
 - [ ] **T02 — Reunir materiais das marcas** — Websites, logótipos, guias visuais, fotos/clips autorizados, serviços, contactos, ofertas, restrições e exemplos.
 - [ ] **T03 — Configurar regras por conta** — Definir frequência, formatos, idioma, fuso, horário e publicação autónoma; revisão humana fica opcional.
 - [ ] **T04 — Seleccionar ambiente** — Escolher VPS/servidor sempre ligado para n8n, MCP, OpenClaw, worker de imagem, PostgreSQL e storage.
-- [ ] **T05 — Criar repositório GitHub MIT** — Versionar código e workflows sem tokens, auth.json, mídia nem credenciais; publicar no destino GitHub a indicar.
+- [x] **T05 — Criar repositório GitHub MIT** — Repositório público `joelbennz/nexacos-social-content-automation`, branch `main`, licença MIT e conteúdo publicado sem tokens, auth.json, mídia nem credenciais.
 
 ## Fase 1 — MCP partilhado para Codex e OpenClaw (bloqueadora)
 
@@ -107,6 +107,5 @@ T00–T05 → T06–T11 → T12–T15 → T16–T19 → T20–T24
 - Feito: agente OpenClaw principal, cinco agentes especialistas e skill de orquestração instalados/registados. O principal tem perfil `full`, delegação configurada e MCP em modo `approve`; a chave n8n ainda não está configurada.
 - Feito: modelo de imagem definido para `openai/gpt-image-2`; login OAuth do Codex no OpenClaw não foi iniciado.
 - Pendente: escolher/configurar provider de texto independente. O modelo actual do OpenClaw é `openai/gpt-6-astra`; autenticar o OAuth OpenAI antes de separar o texto pode permitir que chamadas de texto também usem a rota Codex.
-- Feito: repositório Git local inicializado na pasta do projecto e licença MIT na raiz. Pendente: remoto/owner do GitHub.
+- Feito: repositório Git local inicializado, commit `9b30c46` e publicação no GitHub público [joelbennz/nexacos-social-content-automation](https://github.com/joelbennz/nexacos-social-content-automation); `main` acompanha `origin/main`.
 - Pendente: URL/API key do n8n, credenciais Meta por conta, storage persistente e callback acessível. Sem estas integrações não foram criados workflows nem executadas publicações.
-- GitHub CLI não está instalado/configurado e não há token no ambiente. Não foi feito push.

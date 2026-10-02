@@ -15,6 +15,10 @@ Multi-brand publishing automation for Facebook and Instagram. n8n owns schedules
 
 The `social-n8n-admin` MCP entry is already registered in Codex and OpenClaw. Set `N8N_BASE_URL` to the instance API root ending in `/api/v1` and `N8N_API_KEY` in both hosts' protected environments; do not commit the key. Meta OAuth credentials, storage, a public callback route, and a non-Codex text provider are also required before autonomous publishing.
 
+## GitHub
+
+Public MIT repository: [joelbennz/nexacos-social-content-automation](https://github.com/joelbennz/nexacos-social-content-automation).
+
 Never commit API keys, OAuth profiles, `auth.json`, client media, or generated assets. `implementation/.gitignore` excludes the local secret and media paths.
 
 ## License
