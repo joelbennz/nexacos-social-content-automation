@@ -103,7 +103,7 @@ T00–T05 → T06–T11 → T12–T15 → T16–T19 → T20–T24
 
 ## Implementação local — 2026-10-02
 
-- Feito: servidor MCP implementado, registado e activado no Codex e OpenClaw. Handshake MCP local e descoberta de ferramentas confirmados; chamada de estado pára antes da rede porque faltam as duas variáveis n8n.
+- Feito: servidor MCP registado no Codex e no perfil OpenClaw deste computador. `openclaw mcp status` confirma configuração activa; `openclaw mcp probe` lista `n8n_api_request` e `n8n_status` sem diagnósticos; cache MCP limpo para o próximo runtime do agente. A ligação à API n8n continua pendente porque faltam URL/chave.
 - Feito: agente OpenClaw principal, cinco agentes especialistas e skill de orquestração instalados/registados. O principal tem perfil `full`, delegação configurada e MCP em modo `approve`; a chave n8n ainda não está configurada.
 - Feito: modelo de imagem definido para `openai/gpt-image-2`; login OAuth do Codex no OpenClaw não foi iniciado.
 - Pendente: escolher/configurar provider de texto independente. O modelo actual do OpenClaw é `openai/gpt-6-astra`; autenticar o OAuth OpenAI antes de separar o texto pode permitir que chamadas de texto também usem a rota Codex.
