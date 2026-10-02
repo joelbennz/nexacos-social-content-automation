@@ -1,0 +1,7 @@
+{
+  "name": "n8n-control",
+  "version": "0.1.0",
+  "description": "Control an n8n instance through its Public API from Codex or OpenClaw.",
+  "mcpServers": "./.mcp.json"
+}
+

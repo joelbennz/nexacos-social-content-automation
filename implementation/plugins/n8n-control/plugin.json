@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "n8n-control",
+  "version": "0.1.0",
+  "description": "Control an n8n instance through its Public API from Codex or OpenClaw.",
+  "author": {
+    "name": "Nexacos Intelligence"
+  },
+  "license": "MIT",
+  "keywords": ["n8n", "mcp", "automation", "workflow"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "n8n Control",
+        "shortDescription": "Gerir instância n8n",
+        "longDescription": "Create, inspect, edit, activate, execute, and manage workflows and other resources through the configured n8n Public API.",
+        "developerName": "Nexacos Intelligence",
+        "category": "Productivity",
+        "capabilities": ["Connectors"],
+        "defaultPrompt": "Use n8n Control to inspect or manage my n8n workflows."
+      }
+    }
+  }
+}
+

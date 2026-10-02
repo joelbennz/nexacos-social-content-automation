@@ -1,0 +1,61 @@
+// Example fragment only: merge into the existing OpenClaw config and replace
+// every C:/REPLACE/... path. Keep N8N_API_KEY in the Gateway's secret
+// environment; do not put it in this file or in a workflow.
+{
+  mcp: {
+    servers: {
+      "social-n8n-admin": {
+        enabled: true,
+        command: "node",
+        args: ["C:/REPLACE/implementation/plugins/n8n-control/server.mjs"],
+        cwd: "C:/REPLACE/implementation/plugins/n8n-control",
+        // No tool filter: the agent receives the full API adapter surface.
+      },
+    },
+  },
+  agents: {
+    defaults: {
+      systemAgent: { agentId: "main" },
+      // Replace this with an available non-Codex text model before activation.
+      model: { primary: "REPLACE_WITH_NON_CODEX_TEXT_MODEL" },
+      mediaModels: { image: { primary: "openai/gpt-image-2" } },
+    },
+    entries: {
+      main: {
+        workspace: "C:/REPLACE/implementation/openclaw",
+        // Full tool profile exposes configured MCP plugin tools to the coordinator.
+        tools: { profile: "full" },
+        subagents: {
+          allowAgents: [
+            "social-strategist",
+            "social-copywriter",
+            "social-art-director",
+            "social-carousel-designer",
+            "social-quality-reviewer",
+          ],
+          delegationMode: "prefer",
+        },
+      },
+      "social-strategist": {
+        workspace: "C:/REPLACE/implementation/openclaw/agents/social-strategist",
+        subagents: { allowAgents: [] },
+      },
+      "social-copywriter": {
+        workspace: "C:/REPLACE/implementation/openclaw/agents/social-copywriter",
+        subagents: { allowAgents: [] },
+      },
+      "social-art-director": {
+        workspace: "C:/REPLACE/implementation/openclaw/agents/social-art-director",
+        subagents: { allowAgents: [] },
+      },
+      "social-carousel-designer": {
+        workspace: "C:/REPLACE/implementation/openclaw/agents/social-carousel-designer",
+        subagents: { allowAgents: [] },
+      },
+      "social-quality-reviewer": {
+        workspace: "C:/REPLACE/implementation/openclaw/agents/social-quality-reviewer",
+        subagents: { allowAgents: [] },
+      },
+    },
+  },
+}

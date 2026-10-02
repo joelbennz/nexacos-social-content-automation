@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+*.log
+credentials.json
+auth.json
+secrets.*
+client-assets/
+generated-assets/
+.DS_Store
+Thumbs.db
+
