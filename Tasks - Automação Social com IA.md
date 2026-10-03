@@ -109,3 +109,11 @@ T00–T05 → T06–T11 → T12–T15 → T16–T19 → T20–T24
 - Pendente: escolher/configurar provider de texto independente. O modelo actual do OpenClaw é `openai/gpt-6-astra`; autenticar o OAuth OpenAI antes de separar o texto pode permitir que chamadas de texto também usem a rota Codex.
 - Feito: repositório Git local inicializado, commit `9b30c46` e publicação no GitHub público [joelbennz/nexacos-social-content-automation](https://github.com/joelbennz/nexacos-social-content-automation); `main` acompanha `origin/main`.
 - Pendente: URL/API key do n8n, credenciais Meta por conta, storage persistente e callback acessível. Sem estas integrações não foram criados workflows nem executadas publicações.
+
+## Recuperação do runtime — 2026-10-03
+
+- Observação recebida do agente: a sessão anterior não expôs as ferramentas MCP. O registo no perfil local, por sua vez, aparece configurado/activo e o probe local anuncia `n8n_api_request` e `n8n_status` sem diagnósticos.
+- Recuperação: o Gateway local estava sem `gateway.mode`; foi definido como `local` e o processo foi reiniciado. A porta `127.0.0.1:18789` voltou a escutar com o MCP configurado.
+- [ ] T09b — Confirmar que a sessão autenticada do agente expõe o MCP e chamar `n8n_status`. A CLI deste processo ainda não está emparelhada para inspecionar o catálogo da sessão.
+- [ ] T07 — Ligar n8n e provisionar acesso administrativo — URL e chave da API ainda ausentes; configurar a chave no ambiente protegido.
+- [ ] T10 — Provar ciclo completo com workflow de teste — Pendente de T07/T09b; nenhum workflow foi criado, executado ou publicado.
