@@ -116,6 +116,6 @@ T00–T05 → T06–T11 → T12–T15 → T16–T19 → T20–T24
 - Recuperação: o Gateway local estava sem `gateway.mode`; foi definido como `local` e o processo foi reiniciado. A porta `127.0.0.1:18789` voltou a escutar com o MCP configurado.
 - Estado actual: o utilizador confirmou que o Gateway está funcional; não é o bloqueio corrente e não deve ser reiniciado para este diagnóstico.
 - Codex: `codex mcp list` mostra `social-n8n-admin` habilitado, mas as ferramentas não aparecem no catálogo desta sessão activa. A documentação do Codex indica que a configuração local é partilhada com a app desktop e pode ser actualizada em Settings → MCP servers → Restart; confirmar a exposição após o refresh.
-- [ ] T09b — Confirmar que uma sessão Codex/OpenClaw expõe o MCP e chamar `n8n_status`. O probe do servidor MCP passa, mas o catálogo desta sessão Codex ainda não inclui as ferramentas.
+- [x] T09b (parte MCP) — A sessão actual do Codex expõe `social-n8n-admin` e a chamada directa a `n8n_status` funciona; o retorno confirma que faltam `N8N_BASE_URL` e `N8N_API_KEY`.
 - [ ] T07 — Ligar n8n e provisionar acesso administrativo — URL e chave da API ainda ausentes; configurar a chave no ambiente protegido.
 - [ ] T10 — Provar ciclo completo com workflow de teste — Pendente de T07/T09b; nenhum workflow foi criado, executado ou publicado.
